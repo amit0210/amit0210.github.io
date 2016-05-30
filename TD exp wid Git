@@ -1,0 +1,46 @@
+Practice link for ubuntu packages :http://packages.ubuntu.com/source/wily/gnome-calculator
+​gnome-calculator_3.16.2-1ubuntu1.dsc 1.9 kB a1ae9f77be05171ca6ebbd5ca215a7fe gnome-calculator_3.16.2.orig.tar.xz 1,403.4 kB 3756f5f782c008b9b4e612a0d517f834 gnome-calculator_3.16.2-1ubuntu1.debian.tar.xz​
+
+​(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mkdir ubuntu
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/g
+gnome-calculator_3.16.2-1ubuntu1.debian.tar.xz  gnome-calculator_3.16.2.orig.tar.xz            
+gnome-calculator_3.16.2-1ubuntu1.dsc            google-chrome-stable_current_amd64.deb         
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/g
+gnome-calculator_3.16.2-1ubuntu1.debian.tar.xz  gnome-calculator_3.16.2.orig.tar.xz            
+gnome-calculator_3.16.2-1ubuntu1.dsc            google-chrome-stable_current_amd64.deb         
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/gnome-calculator_3.16.2
+mv: missing destination file operand after ‘/home/amit/Downloads/gnome-calculator_3.16.2’
+Try 'mv --help' for more information.
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/gnome-calculator_3.16.2
+gnome-calculator_3.16.2-1ubuntu1.debian.tar.xz  gnome-calculator_3.16.2-1ubuntu1.dsc            gnome-calculator_3.16.2.orig.tar.xz
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/gnome-calculator_3.16.2*
+mv: target ‘/home/amit/Downloads/gnome-calculator_3.16.2.orig.tar.xz’ is not a directory
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/gnome-calculator_3.16.2* ubuntu/
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ ls ubuntu/
+gnome-calculator_3.16.2-1ubuntu1.debian.tar.xz  gnome-calculator_3.16.2-1ubuntu1.dsc  gnome-calculator_3.16.2.orig.tar.xz
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ dpkg-source -x ubuntu/gnome-calculator_3.16.2-1ubuntu1.dsc
+gpgv: Signature made lun 13 jul 2015 01:06:52 CEST using DSA key ID 0F7C882E
+gpgv: Can't check signature: public key not found
+dpkg-source: warning: failed to verify signature on ubuntu/gnome-calculator_3.16.2-1ubuntu1.dsc
+dpkg-source: info: extracting gnome-calculator in gnome-calculator-3.16.2
+dpkg-source: info: unpacking gnome-calculator_3.16.2.orig.tar.xz
+dpkg-source: info: unpacking gnome-calculator_3.16.2-1ubuntu1.debian.tar.xz
+dpkg-source: info: applying git_no_headerbars_in_unity.patch
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ ls gnome-calculator-3.16.2/
+aclocal.m4  compile       config.sub  configure.ac  data    depcomp                help        ltmain.sh  Makefile.am  missing  po               src          tests
+autogen.sh  config.guess  configure   COPYING       debian  gnome-calculator.doap  install-sh  m4         Makefile.in  NEWS     search-provider  test-driver
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv gnome-calculator-3.16.2 gnome-calculator-3.16.2-ubuntu
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ ls
+analyze_baserock.py  dashboards.py  diff_test.py                         gnome-calculator-3.16.2-ubuntu  README.md      tomboy-1.15.4.tar.xz
+analyze_github.py    definitions    gnome-calculator                     gnome-calculator-3.20.0         tomboy         ubuntu
+analyze_git.py       diff-3.output  gnome-calculator_3.16.2.orig.tar.xz  gnome-calculator-3.20.0.tar.xz  tomboy-1.15.4
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv gnome-calculator gnome-calculator.repo
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ ls
+analyze_baserock.py  dashboards.py  diff_test.py                         gnome-calculator-3.20.0         README.md      tomboy-1.15.4.tar.xz
+analyze_github.py    definitions    gnome-calculator_3.16.2.orig.tar.xz  gnome-calculator-3.20.0.tar.xz  tomboy         ubuntu
+analyze_git.py       diff-3.output  gnome-calculator-3.16.2-ubuntu       gnome-calculator.repo           tomboy-1.15.4
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ ./diff_test.py --repo gnome-calculator.repo/ -p gnome-calculator-3.16.2-ubuntu/ --after 2013-02-01 --step 1000 -l info
+INFO:Fetching commits: 'tbd' git repository from 2013-02-01 00:00:00
+INFO:Fetch process completed: 772 commits fetched
+INFO:772 commits parsed.
+INFO:Computing metrics for 0.
