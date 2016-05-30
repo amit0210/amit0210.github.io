@@ -1,0 +1,27 @@
+Description
+
+We're going to compute the technical debt for Ubuntu packages. Steps may be:
+
+    Finding the most likely upstream commit for a Ubuntu package.
+
+    Having a script for, given the name of a Ubuntu package, and the url for the git repo of its upstream, find its most likely commit upstream:
+
+diff_ubuntu gnome-tomboy http://url_tomboy_git_repo
+
+would produce the hash and date of the most likely commit upstream
+
+This can be done for a start for a specific Ubuntu release, such as 15.04.
+
+    Having a script doing the same, for versions of the package in several Ubuntu releeases (14.04, 14.10, 15.04, 15.10)
+
+The result will be the most likely upstream commit for each of the packages.
+
+    Doing the same for a subset of an entire Ubuntu distro.
+
+For this, we would need something like a configuration file for the packages, stating the corresponding upstream repos for each package. Something like:
+
+[{pkg_name: gnome-tomboy,
+url_repo: http://url_upstream_git_repo
+}, .... ]
+
+    Actually estimating technical debt for all those packages, as a diff in lines and commits.
