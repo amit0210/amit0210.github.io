@@ -1,0 +1,26 @@
+Overview
+
+The project will focus on showing how much "technical debt" is assumed by staying with an old version of a distro. In particular, the project will analyze at least some versions of one of the simpler Baserock-based distributions. For that, we will develop an infrastructure for analyzing (and annotating if needed) Baserock packages with respect to their upstream source code (git repositories), measuring differences between versions by counting commits and commit sizes between those versions.
+
+The detailed plan is as follows:
+
+    Find out what extra information is needed in the description of the package, if any, to be
+    able of calculating the metrics.
+    Annotate (if needed) the relevant package versions with that extra information.
+    Develop some scripts that, given the annotated descriptions of two versions of the same
+    package, calculate the number of upstream commits and commit sizes to upgrade to the
+    newer from the older.
+    Develop some scripts that, given a collection of annotated descriptions for two versions of
+    a distro, find the common packages and run the previous scripts to calculate the total
+    number of upstream commits and commit sizes to upgrade to the newer from the older.
+    Produce some results for some specific Baserock-based distribution.
+
+The project doesn't commit for all of these steps to be successfully completed, but aims for a best-effort in that direction.
+Some random ideas:
+
+    Maybe we could use the name "technical lag for code compilations". Code compilations need a definition, but they coudl range from a Linux-based distribution, to an installation of Python with all its packages, to a node.js or HTML5 application with all its dependencies, to a virtual machine or Docker container.
+    The idea to use "lag" instead of "debt" is because our interest is really in measuring how a certain compilation is lagging behind (or ahead) of the "stable standard" for the software it includes. For measuring technical lag, therefore, we need to (1) identify the "gold stable standard" (to which we will compare), and (2) the metric(s) to define how much we lag.
+    For (1), we're using the idea of the head of the master branch for now, but we could be much more sophisticated, at the cost, probably, of being specific for each package.
+    For (2), number of commits and number of different lines is only a first step. Number of security issues closed, number of feature requests, number of bug reports closed, etc. would probably be much better and useful indicators.
+    We can aim for a paper for ICSE (deadline late August), knowing that it is going to be very difficult. But we can try. For that, we would need a survey to experts, to whom we caan explain the model, so that they can assess on how to improve it, and how much useful it is.
+
