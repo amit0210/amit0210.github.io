@@ -1,0 +1,52 @@
+​
+
+​Code think 1 st process.odt  github            Pictures           virt-perceval
+CVSAnalY                     gitlab            Public             WIFI
+Desktop                      Music             RepositoryHandler
+Documents                    mypython          Templates
+(venv)amit@amit-XPS-13-9350:~$ Perceval-demos
+Perceval-demos: command not found
+(venv)amit@amit-XPS-13-9350:~$ cd Perceval-demos
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$  mv ~/Downloads/g
+mv: missing destination file operand after ‘/home/amit/Downloads/g’
+Try 'mv --help' for more information.
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ gnome-calculator_3.16.2-1ubuntu1.debian.tar.xz  gnome-calculator_3.16.2.orig.tar.xz           
+gnome-calculator_3.16.2-1ubuntu1.debian.tar.xz: command not found
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ gnome-calculator_3.16.2-1ubuntu1.dsc
+gnome-calculator_3.16.2-1ubuntu1.dsc: command not found
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/abacas_1.3.1
+mv: missing destination file operand after ‘/home/amit/Downloads/abacas_1.3.1’
+Try 'mv --help' for more information.
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/abacas_1.3.1.debian.taq.gz
+mv: missing destination file operand after ‘/home/amit/Downloads/abacas_1.3.1.debian.taq.gz’
+Try 'mv --help' for more information.
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/abacas_1.3.1.debian.taq.gz
+mv: missing destination file operand after ‘/home/amit/Downloads/abacas_1.3.1.debian.taq.gz’
+Try 'mv --help' for more information.
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ ls
+analyze_baserock.py  definitions                          gnome-calculator-3.16.2-ubuntu  README.md             ubuntu
+analyze_github.py    diff-3.output                        gnome-calculator-3.20.0         tomboy
+analyze_git.py       diff_test.py                         gnome-calculator-3.20.0.tar.xz  tomboy-1.15.4
+dashboards.py        gnome-calculator_3.16.2.orig.tar.xz  gnome-calculator.repo           tomboy-1.15.4.tar.xz
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Do
+Documents/ Downloads/
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Do
+Documents/ Downloads/
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/abacas_1.3.1
+abacas_1.3.1-2.debian.tar.gz  abacas_1.3.1-2.dsc            abacas_1.3.1.orig.tar.gz     
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ mv ~/Downloads/abacas_1.3.1* .
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ ls
+abacas_1.3.1-2.debian.tar.gz  analyze_github.py  diff-3.output                        gnome-calculator-3.20.0         tomboy
+abacas_1.3.1-2.dsc            analyze_git.py     diff_test.py                         gnome-calculator-3.20.0.tar.xz  tomboy-1.15.4
+abacas_1.3.1.orig.tar.gz      dashboards.py      gnome-calculator_3.16.2.orig.tar.xz  gnome-calculator.repo           tomboy-1.15.4.tar.xz
+analyze_baserock.py           definitions        gnome-calculator-3.16.2-ubuntu       README.md                       ubuntu
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ dpkg-source -x abacas_1.3.1-2.dsc
+gpgv: Signature made vie 25 oct 2013 16:05:05 CEST using DSA key ID C09FD35A
+gpgv: Can't check signature: public key not found
+dpkg-source: warning: failed to verify signature on ./abacas_1.3.1-2.dsc
+dpkg-source: info: extracting abacas in abacas-1.3.1
+dpkg-source: info: unpacking abacas_1.3.1.orig.tar.gz
+dpkg-source: info: unpacking abacas_1.3.1-2.debian.tar.gz
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ ls abacas-1.3.1/
+abacas  debian  Manual.html  style.css
+(venv)amit@amit-XPS-13-9350:~/Perceval-demos$ 
